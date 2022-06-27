@@ -25,6 +25,7 @@
 <!-- INFORMATION -->
 ## :herb: <samp>INFORMATION</samp> <img alt="" align="right" src="https://badges.pufler.dev/visits/iamtinsae/BetterLS?style=for-the-badge&color=A7D9B2&logoColor=white&labelColor=1C2325"/>
 A better `ls` alternative for everyone.
+### :warning: <samp>Incomplete and work in progress.</samp>
 
    <img src="screenshots/preview.png" alt="Screenshot" align="right" width="400px">
 
