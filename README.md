@@ -54,3 +54,4 @@ A better `ls` alternative for everyone.
 - [ ] Show file type (e.g image, audio, video) instead of just <b>FILE</b>
 - [ ] Only show hidden files when executed with -a option
 - [ ] Show directories on top
+- [ ] Limit displayed path characters
