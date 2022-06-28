@@ -47,3 +47,10 @@ A better `ls` alternative for everyone.
 <p align="center">
    <img src="https://raw.githubusercontent.com/catppuccin/catppuccin/dev/assets/footers/gray0_ctp_on_line.svg?sanitize=true"/>
 </p>
+
+<!-- SETUP -->
+## ✅ <samp>Todos</samp>
+- [ ] Show directory size correctly
+- [ ] Show file type (e.g image, audio, video) instead of just <b>FILE</b>
+- [ ] Only show hidden files when executed with -a option
+- [ ] Show directories on top
