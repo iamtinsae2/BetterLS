@@ -4,6 +4,8 @@ import click
 import tabulate
 from utils import sizeof_fmt
 
+MAX_ALLOWED_FILENAME_LENGTH = 20
+
 # Returns list of files and directories present
 # in the given path
 def list_dir(path: str) -> list[tuple]:
@@ -36,8 +38,12 @@ def list_dir(path: str) -> list[tuple]:
 def prettify(paths):
   ret = []
 
-  for path in paths:
+  for path in map(list, paths):
     *_, path_type = path
+
+    if len(path[1]) > MAX_ALLOWED_FILENAME_LENGTH:
+      path[1] = f"{path[1][:MAX_ALLOWED_FILENAME_LENGTH-3]}..."
+
     if path_type == 'FILE':
       path = map(lambda a: click.style(a, fg="yellow"), path)
     elif path_type == 'DIR':
