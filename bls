@@ -37,7 +37,7 @@ def prettify(paths):
   ret = []
 
   for path in paths:
-    idx, name, size, path_type = path
+    *_, path_type = path
     if path_type == 'FILE':
       path = map(lambda a: click.style(a, fg="yellow"), path)
     elif path_type == 'DIR':
