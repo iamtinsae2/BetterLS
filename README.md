@@ -55,3 +55,4 @@ A better `ls` alternative for everyone.
 - [ ] Only show hidden files when executed with -a option
 - [ ] Show directories on top
 - [ ] Limit displayed path characters
+- [ ] Remove dependencies
