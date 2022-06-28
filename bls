@@ -55,12 +55,9 @@ def prettify(paths):
 @click.argument("path", default=os.getcwd())
 def main(path):
   out = list_dir(path)
-
   headers = ("#", "NAME", "SIZE", "TYPE")
   
   click.echo(tabulate.tabulate(prettify(out), headers=headers, tablefmt="fancy_outline"))
-
-  pass
 
 if __name__ == '__main__':
   main()
