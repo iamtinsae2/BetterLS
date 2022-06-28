@@ -35,8 +35,11 @@ def list_dir(path: str) -> list[tuple]:
   return ret
 
 # PRETTIFY
-def prettify(paths):
+def prettify(paths, *, show_hidden_files=False):
   ret = []
+
+  if not show_hidden_files:
+    paths = filter(lambda path: not path[1].startswith("."), paths)
 
   for path in map(list, paths):
     *_, path_type = path
@@ -59,11 +62,12 @@ def prettify(paths):
 
 @click.command()
 @click.argument("path", default=os.getcwd())
-def main(path):
+@click.option("-a", "--all", "show_hidden_files", is_flag=True, show_default=True, default=False, help="Include directory entries whose names begin with a dot (.)")
+def main(path, show_hidden_files):
   out = list_dir(path)
   headers = ("#", "NAME", "SIZE", "TYPE")
   
-  click.echo(tabulate.tabulate(prettify(out), headers=headers, tablefmt="fancy_outline"))
+  click.echo(tabulate.tabulate(prettify(out, show_hidden_files=show_hidden_files), headers=headers, tablefmt="fancy_outline"))
 
 if __name__ == '__main__':
   main()
