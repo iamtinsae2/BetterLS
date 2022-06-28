@@ -52,7 +52,7 @@ A better `ls` alternative for everyone.
 ## ✅ <samp>Todos</samp>
 - [ ] Show directory size correctly
 - [ ] Show file type (e.g image, audio, video) instead of just <b>FILE</b>
-- [ ] Only show hidden files when executed with -a option
+- [x] Only show hidden files when executed with -a option
 - [ ] Show directories on top
 - [x] Limit displayed path characters
 - [ ] Remove dependencies
