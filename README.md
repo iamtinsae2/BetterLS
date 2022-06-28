@@ -40,8 +40,8 @@ A better `ls` alternative for everyone.
    > Make sure you have python3 installed!
    ```sh
     > git clone https://github.com/iamtinsae/BetterLS.git
-    > cd BetterLS && chmod +x ./bls.py
-    > ./bls.py /
+    > cd BetterLS && chmod +x ./bls
+    > ./bls /
    ```
 
 <p align="center">
